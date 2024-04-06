@@ -574,8 +574,10 @@ function win(){
 
     if(p1score>p2score){
         alert("Player 1 Wins!");
+        updateValue("turnTracker","Player 1 Wins!");
     } else if(p2score>p1score){
         alert("Player 2 Wins!");
+        updateValue("turnTracker","Player 2 Wins!");
     } else{
         alert("It's a tie!");
     }
