@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./script.js" type="text/javascript"></script> 
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;" onload="reset()">
+    
+    <h1 style="text-align: center; vertical-align: middle;">Snooker Calculator</h1>
+
+    <table style="margin: auto; width: 35vh;" id="balltracker">
+
+        <caption><b>BALLS REMAINING</b></caption>
+
+        <tr>
+            <td colspan="2"></td>
+            <td id="num_reds"><div class="coloured0">15x</div></td>
+            <td><div  id="r0" class="coloured0"></div></td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr id="coloured0">
+            <td><div  id="y0" class="coloured0"></div></td>
+            <td><div  id="g0" class="coloured0"></div></td>
+            <td><div  id="br0" class="coloured0"></div></td>
+            <td><div  id="bl0" class="coloured0"></div></td>
+            <td><div  id="p0" class="coloured0"></div></td>
+            <td><div  id="bk0" class="coloured0"></div></td>
+
+        </tr>
+
+    </table>
+
+    <table style="margin: auto; width: 35vh; padding-top: 2vh;" id="playertracker">
+    
+        <tr>
+            <td colspan="2" class="label">Player 1</td>
+            <td colspan="2" class="label">Player 2</td>
+        </tr>
+
+        <tr id="points">
+            <td colspan="2" id="p1points" class="label">0</td>
+            <td colspan="2" id="p2points" class="label">0</td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><button id="r1" onclick="addScore(1,1)">+1</button></td>
+            <td colspan="2"><button id="r2" onclick="addScore(2,1)">+1</button></td>
+        </tr>
+
+        <tr>
+            <td width="25%"><button id="y1" onclick="addScore(1,2)">+2</button></td>
+            <td width="25%"><button id="g1" onclick="addScore(1,3)">+3</button></td>
+            <td width="25%"><button id="y2" onclick="addScore(2,2)">+2</button></td>
+            <td width="25%"><button id="g2" onclick="addScore(2,3)">+3</button></td>
+        </tr>
+
+        <tr>
+            <td width="25%"><button id="br1" onclick="addScore(1,4)">+4</button></td>
+            <td width="25%"><button id="bl1" onclick="addScore(1,5)">+5</button></td>
+            <td width="25%"><button id="br2" onclick="addScore(2,4)">+4</button></td>
+            <td width="25%"><button id="bl2" onclick="addScore(2,5)">+5</button></td>
+        </tr>
+
+        <tr>
+            <td width="25%"><button id="p1" onclick="addScore(1,6)">+6</button></td>
+            <td width="25%"><button id="bk1" onclick="addScore(1,7)">+7</button></td>
+            <td width="25%"><button id="p2" onclick="addScore(2,6)">+6</button></td>
+            <td width="25%"><button id="bk2" onclick="addScore(2,7)">+7</button></td>
+        </tr>
+
+        <tr>
+            <td width="25%"><button id="handover1" onclick="handover(1)">SWITCH TURNS</button></td>
+            <td width="50%" colspan="2" id="turnTracker">Player 1's Turn</td>
+            <td width="25%"><button id="handover2" onclick="handover(2)">SWITCH TURNS</button></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td colspan="2"><button id="reset" onclick="reset()">RESET</button></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+</body>

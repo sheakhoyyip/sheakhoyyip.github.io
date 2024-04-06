@@ -1,0 +1,103 @@
+.coloured0 {
+    font-weight: bold;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#num_reds{
+    font-size: larger;
+    font-weight: bolder;
+    text-align: right;
+}
+
+#r0{
+    background-color: #ff0000;
+}
+
+#y0 {
+    background-color: #F4EB06;
+
+}
+
+#g0 {
+    background-color: green;
+}
+
+#br0 {
+    background-color: saddlebrown;
+    color:#ffffff;
+}
+
+#bl0 {
+    background-color:mediumblue;
+    color:#ffffff;
+}
+
+#p0 {
+    background-color:pink;
+    color:#000000;
+}
+
+#bk0 {
+    background-color:black;
+    color:#ffffff;
+}
+
+.label{
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bolder;
+}
+
+#points {
+    height: 5vh;
+    font-size: 4vh;
+}
+
+button{
+    width: 100%;
+    height: 5vh;
+    font-weight: bolder;
+    border-style: none;
+}
+
+#r1, #r2 {
+    background-color: #ff0000;
+}
+
+#y1, #y2 {
+    background-color: #F4EB06;
+}
+
+#g1, #g2 {
+    background-color: green;
+}
+
+#br1, #br2 {
+    background-color: saddlebrown;
+    color: white;
+}
+
+#bl1, #bl2 {
+    background-color: mediumblue;
+    color: white;
+}
+
+#p1, #p2 {
+    background-color: pink;
+}
+
+#bk1, #bk2 {
+    background-color: black;
+    color: white;
+}
+
+#turnTracker{
+    font-weight: bolder;
+    text-align: center;
+}
