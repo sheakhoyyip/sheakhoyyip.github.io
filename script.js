@@ -27,6 +27,8 @@ function reset(){
     updateValue("p2points", p2score);
     updateValue("num_reds", rednum + "x");
 
+    updateValue("turnTracker","Player 1's Turn");
+
     document.getElementById("num_reds").style.opacity = 1;
     document.getElementById("r0").style.opacity = 1;
     document.getElementById("y0").style.opacity = 1;
