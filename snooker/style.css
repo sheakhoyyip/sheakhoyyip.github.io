@@ -113,3 +113,12 @@ button{
 #reset{
     color: #000000;
 }
+
+a {
+    color: inherit;
+}
+
+#backlink {
+    text-align: center;
+    padding-top: 5%;
+}
