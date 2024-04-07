@@ -1,0 +1,151 @@
+td{
+    text-align: center;
+    padding-top: 0.5vh;
+}
+
+.solids {
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.solids_internal {
+    height: 2.5vh;
+    width: 2.5vh;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.stripes {
+    box-sizing: border-box;
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: thick;
+}
+
+.stripes_internal {
+    height: 3vh;
+    width: 5vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.stripes_internal2 {
+    height: 2.5vh;
+    width: 2.5vh;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#b1 {
+    background-color: #f5d000;
+}
+
+#b2 {
+    background-color: navy;
+}
+
+#b3 {
+    background-color: red;
+}
+
+#b4 {
+    background-color: darkslateblue;
+}
+
+#b5 {
+    background-color: orange;
+}
+
+#b6 {
+    background-color: green;
+}
+
+#b7 {
+    background-color: maroon;
+}
+
+#b8 {
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+}
+
+#b9 {
+    border-color: #f5d000;
+}
+
+#b9a {
+    background-color: #f5d000;
+}
+
+#b10 {
+    border-color: navy;
+}
+
+#b10a {
+    background-color: navy;
+}
+
+#b11 {
+    border-color: red;
+}
+
+#b11a {
+    background-color: red;
+}
+
+#b12 {
+    border-color: darkslateblue;
+}
+
+#b12a {
+    background-color: darkslateblue;
+}
+
+#b13 {
+    border-color: orange;
+}
+
+#b13a {
+    background-color: orange;
+}
+
+#b14 {
+    border-color: green;
+}
+
+#b14a {
+    background-color: green;
+}
+
+#b15 {
+    border-color: maroon;
+}
+
+#b15a {
+    background-color: maroon;
+}
