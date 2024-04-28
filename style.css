@@ -3,6 +3,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    max-width: 50vh;
+    margin: auto;
     font-family:Arial, Helvetica, sans-serif;
 }
 

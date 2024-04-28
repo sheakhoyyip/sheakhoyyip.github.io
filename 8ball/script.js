@@ -79,15 +79,15 @@ function reset(){
     updateBackground("ex1","green");
     updateBackground("ex2","green");
 
-    clearInterval(timerA);
-    clearInterval(timerB);
-
     document.getElementById("ex1").style.visibility = "hidden";
     document.getElementById("bar1").style.visibility = "hidden";
     document.getElementById("seconds1").style.visibility = "hidden";
     document.getElementById("ex2").style.visibility = "hidden";
     document.getElementById("bar2").style.visibility = "hidden";
     document.getElementById("seconds2").style.visibility = "hidden";
+    
+    clearInterval(timerA);
+    clearInterval(timerB);
 
 }
 
