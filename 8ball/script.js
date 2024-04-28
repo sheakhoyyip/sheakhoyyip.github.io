@@ -30,8 +30,10 @@ function toggleEnable(id,enable){
     const messageElement = document.getElementById(id);
     if (enable) {
         messageElement.disabled = false;
+        messageElement.style.opacity=1;
     } else if (!enable) {
         messageElement.disabled = true;
+        messageElement.style.opacity=0.25;
     }
     
 }
@@ -102,6 +104,8 @@ function reset(){
 }
 
 function start_timer1(){
+    
+    document.getElementById("bar1").style.fontSize="small";
 
     toggleEnable("start1",false);
     toggleEnable("stop1",true);
@@ -137,6 +141,8 @@ function start_timer1(){
 }
 
 function start_timer2(){
+
+    document.getElementById("bar2").style.fontSize="small";
 
     toggleEnable("start2",false);
     toggleEnable("stop2",true);

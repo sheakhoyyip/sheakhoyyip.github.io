@@ -218,3 +218,7 @@ button{
     font-weight: bold;
     padding: 0.5vh;
 }
+
+.extension, .stop{
+    opacity: 0.25;
+}
