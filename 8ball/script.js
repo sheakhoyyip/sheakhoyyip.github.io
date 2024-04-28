@@ -1,0 +1,262 @@
+var p1timer = 30;
+var p2timer = 30;
+var p1bar = "||||||||||||||||||||||||||||||";
+var p2bar = "||||||||||||||||||||||||||||||";
+var ext1_used = false;
+var ext2_used = false;
+
+
+function updateValue(id,variable){
+    let messageElement = document.getElementById(id);
+    messageElement.textContent = variable;
+}
+
+function updateColor(id,color){
+    let messageElement = document.getElementById(id);
+    messageElement.style.color = color;
+}
+
+function updateBackground(id,background){
+    let messageElement = document.getElementById(id);
+    messageElement.style.backgroundColor = background;
+}
+
+function updateAlign(id,align){
+    let messageElement = document.getElementById(id);
+    messageElement.style.textAlign = align;
+}
+
+function toggleEnable(id,enable){
+    const messageElement = document.getElementById(id);
+    if (enable) {
+        messageElement.disabled = false;
+    } else if (!enable) {
+        messageElement.disabled = true;
+    }
+    
+}
+
+function toggle(ball){
+    if(document.getElementById(ball).style.opacity==1){
+        document.getElementById(ball).style.opacity =0.25;
+    } else {
+        document.getElementById(ball).style.opacity=1;
+    }
+}
+
+function reset(){
+    for(i=1;i<=15;i++){
+        document.getElementById("b"+i).style.opacity=1;
+    }
+
+    p1timer = 30;
+    p2timer = 30;
+    p1bar = "||||||||||||||||||||||||||||||";
+    p2bar = "||||||||||||||||||||||||||||||";
+    ext1_used = false;
+    ext2_used = false;
+
+    updateValue("seconds1",p1timer);
+    updateValue("seconds2",p2timer);
+    updateValue("bar1", p1bar);
+    updateValue("bar2", p2bar);
+
+    updateColor("seconds1","green");
+    updateColor("seconds2","green");
+    updateColor("bar1","green");
+    updateColor("bar2","green");
+
+    document.getElementById("bar1").style.fontSize="small";
+    document.getElementById("bar2").style.fontSize="small";
+
+    toggleEnable("start1",true);
+    toggleEnable("start2",true);
+    toggleEnable("ext1",false);
+    toggleEnable("ext2",false);
+    toggleEnable("stop1",false);
+    toggleEnable("stop2",false);
+
+    updateBackground("ex1","green");
+    updateBackground("ex2","green");
+
+    clearInterval(timerA);
+    clearInterval(timerB);
+
+    document.getElementById("ex1").style.visibility = "hidden";
+    document.getElementById("bar1").style.visibility = "hidden";
+    document.getElementById("seconds1").style.visibility = "hidden";
+    document.getElementById("ex2").style.visibility = "hidden";
+    document.getElementById("bar2").style.visibility = "hidden";
+    document.getElementById("seconds2").style.visibility = "hidden";
+
+}
+
+function start_timer1(){
+
+    toggleEnable("start1",false);
+    toggleEnable("stop1",true);
+
+    updateAlign("bar1","left");
+
+    if(!ext1_used){
+        toggleEnable("ext1",true);
+    }
+
+    if(p1timer!=30){
+        p1timer = 30;
+        p1bar = Array(p1timer+1).join("|");
+        updateValue("bar1", p1bar);
+        updateValue("seconds1", p1timer);
+
+        updateColor("seconds1","green");
+        updateColor("bar1","green");
+    }
+
+    timerA = setInterval(decrement_timer1,1000);
+
+    toggleEnable("start2",false);
+
+    document.getElementById("ex1").style.visibility = "visible";
+    document.getElementById("bar1").style.visibility = "visible";
+    document.getElementById("seconds1").style.visibility = "visible";
+
+    document.getElementById("ex2").style.visibility = "hidden";
+    document.getElementById("bar2").style.visibility = "hidden";
+    document.getElementById("seconds2").style.visibility = "hidden";
+
+}
+
+function start_timer2(){
+
+    toggleEnable("start2",false);
+    toggleEnable("stop2",true);
+
+    updateAlign("bar2","left");
+
+    if(!ext2_used){
+        toggleEnable("ext2",true);
+    }
+
+    if(p2timer!=30){
+        p2timer = 30;
+        p2bar = Array(p2timer+1).join("|");
+        updateValue("bar2", p2bar);
+        updateValue("seconds2", p2timer);
+
+        updateColor("seconds2","green");
+        updateColor("bar2","green");
+    }
+
+    timerB = setInterval(decrement_timer2,1000);
+
+    toggleEnable("start1",false);
+
+    document.getElementById("ex2").style.visibility = "visible";
+    document.getElementById("bar2").style.visibility = "visible";
+    document.getElementById("seconds2").style.visibility = "visible";
+
+    document.getElementById("ex1").style.visibility = "hidden";
+    document.getElementById("bar1").style.visibility = "hidden";
+    document.getElementById("seconds1").style.visibility = "hidden";
+
+}
+
+function decrement_timer1(){
+    p1timer --;
+    p1bar = Array(p1timer+1).join("|");
+    updateAlign("bar1","left");
+    updateValue("bar1", p1bar);
+    updateValue("seconds1", p1timer);
+
+    if(p1timer==10){
+        updateColor("bar1","red");
+        updateColor("seconds1","red");
+    } else if(p1timer == 0){
+        stop_timer1();
+        updateAlign("bar1","center");
+        updateValue("bar1","TIME FOUL");
+        document.getElementById("bar1").style.fontSize="medium";
+        toggleEnable("start1",false);
+    } else if(p1timer > 30){
+        updateAlign("bar1","center");
+        updateValue("bar1","EXTENSION");
+        document.getElementById("bar1").style.fontSize="medium";
+    } else if(0<p1timer<=30){
+        document.getElementById("bar1").style.fontSize="small";
+    }
+
+}
+
+function decrement_timer2(){
+    p2timer --;
+    p2bar = Array(p2timer+1).join("|");
+    updateAlign("bar2","left");
+    updateValue("bar2", p2bar);
+    updateValue("seconds2", p2timer);
+
+    if(p2timer==10){
+        updateColor("bar2","red");
+        updateColor("seconds2","red");
+    } else if(p2timer == 0){
+        stop_timer2();
+        updateAlign("bar2","center");
+        updateValue("bar2","TIME FOUL");
+        document.getElementById("bar2").style.fontSize="medium";
+        toggleEnable("start2",false);
+    } else if(p2timer > 30){
+        updateAlign("bar2","center");
+        updateValue("bar2","EXTENSION");
+        document.getElementById("bar2").style.fontSize="medium";
+    } else if(0<p2timer<=30){
+        document.getElementById("bar2").style.fontSize="small";
+    }
+
+}
+
+function extension1(){
+    if(p1timer > 0){
+        p1timer = p1timer + 30;
+        ext1_used = true;
+    }
+
+    toggleEnable("ext1",false);
+
+    updateBackground("ex1","rgba(255,0,0,0.2)");
+
+}
+
+function extension2(){
+    if(p2timer > 0){
+        p2timer = p2timer + 30;
+        ext2_used = true;
+    }
+
+    toggleEnable("ext2",false);
+
+    updateBackground("ex2","rgba(255,0,0,0.2)");
+
+}
+
+function stop_timer1(){
+    
+    toggleEnable("start1",true);
+    toggleEnable("ext1",false);
+    toggleEnable("stop1",false);
+
+    clearInterval(timerA);
+
+    toggleEnable("start2",true);
+
+}
+
+function stop_timer2(){
+    
+    toggleEnable("start2",true);
+    toggleEnable("ext2",false);
+    toggleEnable("stop2",false);
+
+    clearInterval(timerB);
+
+    toggleEnable("start1",true);
+
+}

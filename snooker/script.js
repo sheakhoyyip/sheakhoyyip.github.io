@@ -1,4 +1,5 @@
-var p1score, p2score;
+var p1score;
+var p2score;
 var rednum;
 var lastred;
 var endgame;
