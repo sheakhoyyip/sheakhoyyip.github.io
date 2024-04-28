@@ -86,8 +86,18 @@ function reset(){
     document.getElementById("bar2").style.visibility = "hidden";
     document.getElementById("seconds2").style.visibility = "hidden";
     
-    clearInterval(timerA);
-    clearInterval(timerB);
+    try{
+        clearInterval(timerA);
+    } catch{
+        return true;
+    }
+    
+    try{
+        clearInterval(timerB);
+    } catch{
+        return true;
+    }
+    
 
 }
 
