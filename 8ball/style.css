@@ -5,6 +5,10 @@ button {
     color: black;
 }
 
+a {
+    color: inherit;
+}
+
 td{
     text-align: center;
     padding-top: 0.5vh;
@@ -162,61 +166,46 @@ td{
 }
 
 #playertimers td:nth-child(0){
-    width:15vh
+    max-width:15vh
 }
 
 td {
     overflow: hidden;
 }
 
-.timer{
-    text-align: left;
-    vertical-align: middle;
-}
-
 button{
     width: 100%;
 }
 
-.ex, .bar, .seconds{
+#indicator {
+    font-size: large;
     visibility: hidden;
+    font-weight: bold;
 }
 
-.bar {
+#ex, #bar, #secs {
+    font-size: x-large;
+    visibility: hidden;
+    font-weight: bold;
+}
+
+#bar, #secs {
     color: green;
-    font-weight: bold;
-    font-size: small;
-    letter-spacing: -0.5px;
+}
+
+#ex_text {
+    background-color: green;
+    color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#bar {
     text-align: left;
-    
 }
 
-.seconds {
-    color:green;
-    font-weight: bold;
-}
-
-.ex{
-    display : flex;
-    justify-content: center;
-    vertical-align: middle;
-    padding: auto;
-}
-
-#ex1 {
-    background-color: green;
-    color: white;
-    font-size: x-small;
-    font-weight: bold;
-    padding: 0.5vh;
-}
-
-#ex2 {
-    background-color: green;
-    color: white;
-    font-size: x-small;
-    font-weight: bold;
-    padding: 0.5vh;
+#player1, #player2{
+    padding-top: 3vh;
 }
 
 .extension, .stop{

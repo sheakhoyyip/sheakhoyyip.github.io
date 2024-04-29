@@ -62,44 +62,48 @@
 
     <table style="margin: auto; width: 40vh; padding-top: 1vh;" id="playertimers">
 
-        <tr>
+        <tr> <!-- toggled player indicator -->
+            <td colspan="10" id="indicator"><b>PLAYER 1</b></td>
+        </tr>
+
+        <tr> <!-- shared timer -->
+            <td id="ex" colspan="2"><span id="ex_text">EX</span></td>
+            <td colspan="6" id="bar">||||||||||||||||||||||||||||||</td>
+            <td id="secs" colspan="2">30</td>
+        </tr>
+        
+        <tr id="players">
             <td colspan="5" id="player1"><b>PLAYER 1</b></td>
             <td colspan="5" id="player2"><b>PLAYER 2</b></td>
         </tr>        
 
         <tr>
-            <td class="ex"><span id="ex1">EX</span></td>
-            <td class="bar" id="bar1" colspan="3">||||||||||||||||||||||||||||||</td>
-            <td class="seconds" id="seconds1">30</td>
-            <td class="ex"><span id="ex2">EX</span></td>
-            <td class="bar" id="bar2" colspan="3">||||||||||||||||||||||||||||||</td>
-            <td class="seconds" id="seconds2">30</td>
-        </tr>
 
-        <tr>
-
-            <td colspan="5"><button class="start" id="start1" onclick="start_timer1()">START TIMER</button></td>
-            <td colspan="5"><button class="start" id="start2" onclick="start_timer2()">START TIMER</button></td>
+            <td colspan="5"><button class="start" id="start1" onclick="start(1)">START TIMER</button></td>
+            <td colspan="5"><button class="start" id="start2" onclick="start(2)">START TIMER</button></td>
 
         </tr>
 
         <tr>
 
-            <td colspan="5"><button class="extension" id="ext1" onclick="extension1()" disabled>EXTENSION</button></td>
-            <td colspan="5"><button class="extension" id="ext2" onclick="extension2()" disabled>EXTENSION</button></td>
+            <td colspan="5"><button class="extension" id="ext1" onclick="extension(1)" disabled>EXTENSION</button></td>
+            <td colspan="5"><button class="extension" id="ext2" onclick="extension(2)" disabled>EXTENSION</button></td>
 
         </tr>
 
         <tr>
 
-            <td colspan="5"><button class="stop" id="stop1" onclick="stop_timer1()" disabled>STOP TIMER</button></td>
-            <td colspan="5"><button class="stop" id="stop2" onclick="stop_timer2()" disabled>STOP TIMER</button></td>
+            <td colspan="5"><button class="stop" id="stop1" onclick="stop()" disabled>STOP TIMER</button></td>
+            <td colspan="5"><button class="stop" id="stop2" onclick="stop()" disabled>STOP TIMER</button></td>
 
         </tr>
 
         <tr>
             
             <td colspan="10"><button id="reset" onclick="reset()">RESET</button></td>
+        </tr>
+        <tr>
+            <td colspan="10"><a href="../index.html">Back to Projects Page</a></td>
         </tr>
 
     </table>
