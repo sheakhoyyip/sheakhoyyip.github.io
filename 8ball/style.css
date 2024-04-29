@@ -194,8 +194,8 @@ button{
 }
 
 #bar {
-    font-size: 21px;
-    /* visibility: hidden; */
+    font-size: 20px;
+    visibility: hidden;
     text-align: left;
     font-weight: bold;
 }
