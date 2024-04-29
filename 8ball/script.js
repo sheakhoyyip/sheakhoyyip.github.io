@@ -110,27 +110,29 @@ function decrement(){
 
     timer--;
 
-        bars = Array(timer+1).join("|");
-        updateValue("secs", timer);
+    bars = Array(timer+1).join("|");
+    updateValue("secs", timer);
         
-        if (timer > 10 && timer <= 30) {
-            updateAlign("bar","left");
-            updateColor("bar","green"); 
-            updateValue("bar",bars);
-        } else if (timer > 0 && timer <= 10) {
-            updateColor("bar","red"); 
-            updateColor("secs","red");
+    if (timer > 10 && timer <= 30) {
+        updateAlign("bar","left");
+        updateColor("bar","green"); 
+        updateValue("bar",bars);
 
-            updateValue("bar",bars);
-        } else if (timer == 0) {
-            updateAlign("bar","center")
-            updateValue("bar","TIME FOUL")
+    } else if (timer > 0 && timer <= 10) {
+        updateColor("bar","red"); 
+        updateColor("secs","red");
 
-            document.getElementById("ex").style.visibility = "hidden";
-            document.getElementById("secs").style.visibility = "hidden";
+        updateValue("bar",bars);
+        
+    } else if (timer == 0) {
+        updateAlign("bar","center")
+        updateValue("bar","TIME FOUL")
 
-            stop();
-        }
+        document.getElementById("ex").style.visibility = "hidden";
+        document.getElementById("secs").style.visibility = "hidden";
+
+        stop();
+    }
 
 }
 
