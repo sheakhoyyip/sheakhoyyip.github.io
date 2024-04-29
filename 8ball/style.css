@@ -184,8 +184,18 @@ button{
 }
 
 #ex, #bar, #secs {
+    vertical-align: middle;
+}
+
+#ex, #secs {
     font-size: x-large;
     visibility: hidden;
+    font-weight: bold;
+}
+
+#bar {
+    font-size: 20px;
+    /* visibility: hidden; */
     font-weight: bold;
 }
 
