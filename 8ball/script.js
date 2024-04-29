@@ -71,6 +71,7 @@ function start(player){
     updateValue("indicator","PLAYER " + turn);
     updateColor("bar","green");
     updateColor("secs","green");
+    updateAlign("bar","left");
 
     document.getElementById("indicator").style.visibility = "visible";
     document.getElementById("bar").style.visibility = "visible";
@@ -123,7 +124,7 @@ function decrement(){
         updateColor("secs","red");
 
         updateValue("bar",bars);
-        
+
     } else if (timer == 0) {
         updateAlign("bar","center")
         updateValue("bar","TIME FOUL")
