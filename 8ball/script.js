@@ -108,6 +108,8 @@ function start(player){
 
 function decrement(){
 
+    timer--;
+
         bars = Array(timer+1).join("|");
         updateValue("secs", timer);
         
@@ -130,7 +132,6 @@ function decrement(){
             stop();
         }
 
-        timer--;
 }
 
 function extension(player){
