@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <windows.h>
-#include <conio.h>  // For _kbhit() function
 #include <string.h> // For strcpy()
 
 int work_time_minutes;
